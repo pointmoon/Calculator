@@ -49,6 +49,7 @@ END_MESSAGE_MAP()
 
 CCalculatorDlg::CCalculatorDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CCalculatorDlg::IDD, pParent)
+	, mStrResult(_T(""))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
@@ -61,12 +62,35 @@ void CCalculatorDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_BUTTON3, mButon_3);
 	DDX_Control(pDX, IDC_BUTTON4, mButon_4);
 	DDX_Control(pDX, IDC_BUTTON5, mButon_5);
+	DDX_Text(pDX, IDC_EDIT_RESULT, mStrResult);
+	DDX_Control(pDX, IDC_BUTTON_PLUS, mButton_PLUS);
+	DDX_Control(pDX, IDC_BUTTON_MINUS, mButton_MINUS);
+	DDX_Control(pDX, IDC_BUTTON_MULT, mButton_MULT);
+	DDX_Control(pDX, IDC_BUTTON_DIV, mButton_DIV);
+	DDX_Control(pDX, IDC_BUTTON_C, mButton_C);
+	DDX_Control(pDX, IDC_BUTTON_EQV, mButton_RESULT);
 }
 
 BEGIN_MESSAGE_MAP(CCalculatorDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CCalculatorDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CCalculatorDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &CCalculatorDlg::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON4, &CCalculatorDlg::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &CCalculatorDlg::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON6, &CCalculatorDlg::OnBnClickedButton6)
+	ON_BN_CLICKED(IDC_BUTTON7, &CCalculatorDlg::OnBnClickedButton7)
+	ON_BN_CLICKED(IDC_BUTTON8, &CCalculatorDlg::OnBnClickedButton8)
+	ON_BN_CLICKED(IDC_BUTTON9, &CCalculatorDlg::OnBnClickedButton9)
+	ON_BN_CLICKED(IDC_BUTTON0, &CCalculatorDlg::OnBnClickedButton0)
+	ON_BN_CLICKED(IDC_BUTTON_C, &CCalculatorDlg::OnBnClickedButtonC)
+	ON_BN_CLICKED(IDC_BUTTON_EQV, &CCalculatorDlg::OnBnClickedButtonEqv)
+	ON_BN_CLICKED(IDC_BUTTON_PLUS, &CCalculatorDlg::OnBnClickedButtonPlus)
+	ON_BN_CLICKED(IDC_BUTTON_MINUS, &CCalculatorDlg::OnBnClickedButtonMinus)
+	ON_BN_CLICKED(IDC_BUTTON_MULT, &CCalculatorDlg::OnBnClickedButtonMult)
+	ON_BN_CLICKED(IDC_BUTTON_DIV, &CCalculatorDlg::OnBnClickedButtonDiv)
 END_MESSAGE_MAP()
 
 
@@ -155,3 +179,99 @@ HCURSOR CCalculatorDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CCalculatorDlg::OnBnClickedButton1()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton2()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton3()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton4()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton5()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton6()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton7()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton8()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton9()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButton0()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonC()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonEqv()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonPlus()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonMinus()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonMult()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
+
+
+void CCalculatorDlg::OnBnClickedButtonDiv()
+{
+	// TODO: добавьте свой код обработчика уведомлений
+}
